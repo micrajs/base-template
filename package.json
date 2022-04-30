@@ -13,7 +13,7 @@
     "dev": "concurrently 'pnpm:dev:*'",
     "lint": "eslint --ext .ts,.tsx .",
     "prepare": "husky install .config/husky",
-    "test:coverage": "vitest run --coverage --config .viterc.ts",
+    "test:coverage": "vitest run --coverage --config .viterc.ts --passWithNoTests",
     "test:dev": "vitest --config .viterc.ts",
     "test": "vitest run --config .viterc.ts"
   },
