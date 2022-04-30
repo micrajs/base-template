@@ -4,20 +4,14 @@
     "noEmit": true,
     "types": [
       "vitest/globals",
-      "@micra/core/application",
-      "@micra/core/application/globals"
+      "@micra/core/application/globals",
+      "@micra/application/application.register"
     ],
     "baseUrl": ".",
     "module": "commonjs",
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"]
 }

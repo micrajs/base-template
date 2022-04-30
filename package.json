@@ -5,7 +5,7 @@
   "author": "Olavo Amorim Santos<olavo.santos@micra.dev>",
   "license": "MIT",
   "scripts": {
-    "build:code": "vite build src/entry.ts --config .viterc.ts",
+    "build:code": "vite build --config .viterc.ts",
     "build:types": "tsc -p tsconfig.json",
     "build": "concurrently 'pnpm:build:*'",
     "dev:code": "nodemon --ext 'ts,tsx' --exec 'vite-node src/entry.ts --config .viterc.ts'",
