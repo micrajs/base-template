@@ -8,15 +8,14 @@
     "build:code": "vite build src/entry.ts --config .viterc.ts",
     "build:types": "tsc -p tsconfig.json",
     "build": "concurrently 'pnpm:build:*'",
-    "dev:code": "nodemon --ext 'ts,tsx' --exec 'vite-node src/entry.ts --config .viterc.ts --watch'",
+    "dev:code": "nodemon --ext 'ts,tsx' --exec 'vite-node src/entry.ts --config .viterc.ts'",
     "dev:types": "nodemon --ext 'ts,tsx' --exec 'pnpm build:types'",
     "dev": "concurrently 'pnpm:dev:*'",
     "lint": "eslint --ext .ts,.tsx .",
-    "prepare:husky": "husky install .config/husky",
+    "prepare": "husky install .config/husky",
     "test:coverage": "vitest run --coverage --config .viterc.ts",
     "test:dev": "vitest --config .viterc.ts",
-    "test": "vitest run --config .viterc.ts",
-    "version:prerelease": "npm version prerelease --preid=next --allow-same-version && git push --follow-tags"
+    "test": "vitest run --config .viterc.ts"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
