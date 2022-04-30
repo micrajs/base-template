@@ -2,12 +2,22 @@
   "extends": "@micra/typescript-config/base",
   "compilerOptions": {
     "noEmit": true,
-    "types": ["vitest/globals", "@micra/application/application.register"],
+    "types": [
+      "vitest/globals",
+      "@micra/core/application",
+      "@micra/core/application/globals"
+    ],
     "baseUrl": ".",
     "module": "commonjs",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts"
+  ]
 }

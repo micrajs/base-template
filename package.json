@@ -5,10 +5,10 @@
   "author": "Olavo Amorim Santos<olavo.santos@micra.dev>",
   "license": "MIT",
   "scripts": {
-    "build:code": "vite-node build src/entry.ts --config .viterc.ts",
+    "build:code": "vite build src/entry.ts --config .viterc.ts",
     "build:types": "tsc -p tsconfig.json",
     "build": "concurrently 'pnpm:build:*'",
-    "dev:code": "vite-node src/entry.ts --config .viterc.ts",
+    "dev:code": "nodemon --ext 'ts,tsx' --exec 'vite-node src/entry.ts --config .viterc.ts --watch'",
     "dev:types": "nodemon --ext 'ts,tsx' --exec 'pnpm build:types'",
     "dev": "concurrently 'pnpm:dev:*'",
     "lint": "eslint --ext .ts,.tsx .",
