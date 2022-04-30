@@ -1,0 +1,13 @@
+{
+  "extends": "@micra/typescript-config/base",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["vitest/globals", "@micra/application/application.register"],
+    "baseUrl": ".",
+    "module": "commonjs",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"]
+}
