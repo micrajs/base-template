@@ -5,7 +5,7 @@
     "types": [
       "vitest/globals",
       "@micra/core/application/globals",
-      "@micra/application/application.register"
+      "@micra/application/register"
     ],
     "baseUrl": ".",
     "module": "commonjs",
